@@ -16,9 +16,9 @@ people = [
 
 for person in people:
     print("Creating person")
-    response = httpx.post('http://localhost:8000/people', json=person)
+    response = httpx.post('http://api:80/people', json=person)
     print(response.json())
 
 print("Getting people")
-response = httpx.get('http://localhost:8000/people')
+response = httpx.get('http://api:80/people')
 print(response.json())
